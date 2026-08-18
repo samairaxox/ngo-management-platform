@@ -1,22 +1,19 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 
 function DashboardLayout() {
   return (
-    <div>
-      <nav>
-        <h2>NGO Platform</h2>
+    <div className="app-layout">
+      <Sidebar />
 
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/volunteers">Volunteers</Link>
-        <Link to="/beneficiaries">Beneficiaries</Link>
-        <Link to="/events">Events</Link>
-        <Link to="/donations">Donations</Link>
-        <Link to="/tasks">Tasks</Link>
-      </nav>
+      <div className="main-area">
+        <Navbar />
 
-      <main>
-        <Outlet />
-      </main>
+        <main className="page-content">
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 }

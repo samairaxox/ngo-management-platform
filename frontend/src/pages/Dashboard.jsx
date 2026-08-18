@@ -1,10 +1,10 @@
-function Login() {
+function Dashboard() {
   return (
     <div>
-      <h1>Login</h1>
-      <p>NGO Operations Platform</p>
+      <h2>Dashboard</h2>
+      <p>Welcome to the NGO Operations Platform.</p>
     </div>
   );
 }
 
-export default Login;
+export default Dashboard;
